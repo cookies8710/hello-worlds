@@ -1,0 +1,11 @@
+message: Hello, client!
+
+server:
+  applicationConnectors:
+    - type: https
+      port: 9090
+      keyStorePath: stores/server_store
+      keyStorePassword: passphrase
+      certAlias: server
+      needClientAuth: true # mTLS
+      trustStorePath: stores/server_store
